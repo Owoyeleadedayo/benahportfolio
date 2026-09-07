@@ -5,8 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, Twitter, Mail, Award, CheckCircle, ShieldCheck, Compass, Users } from "lucide-react";
+import { Linkedin, Twitter, Mail, Award, ShieldCheck, Compass, Users } from "lucide-react";
 import OurCoreValues from "@/components/About/OurCoreValues";
 import OurMandV from "@/components/About/OurMandV";
 

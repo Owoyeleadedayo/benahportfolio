@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "motion/react";
-import { Search, Calendar, Clock, ArrowRight, X, BookOpen } from "lucide-react";
+import { Search, Calendar, Clock, ArrowRight, X } from "lucide-react";
 
 interface BlogPost {
   id: number;
@@ -118,8 +118,10 @@ const Page = () => {
   });
 
   return (
-    <div ref={container} className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden">
-      
+    <div
+      ref={container}
+      className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden"
+    >
       {/* Blog Header */}
       <section className="py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
@@ -130,7 +132,8 @@ const Page = () => {
             Insights, Updates & Industry News
           </h1>
           <p className="text-gray-600 font-dm-sans max-w-xl text-base md:text-lg">
-            Stay informed with expert construction advice, project milestones, and engineering trends shaping West Africa's real estate.
+            Stay informed with expert construction advice, project milestones,
+            and engineering trends shaping West Africa&lsquo;s real estate.
           </p>
         </div>
       </section>
@@ -138,7 +141,6 @@ const Page = () => {
       {/* Filter and Search Bar */}
       <section className="px-6 md:px-12 lg:px-24 mb-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 justify-between items-center border-b border-black/5 pb-8">
-          
           {/* Categories */}
           <div className="flex flex-wrap gap-2.5 w-full md:w-auto">
             {categories.map((cat) => (
@@ -167,7 +169,6 @@ const Page = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-
         </div>
       </section>
 
@@ -211,17 +212,19 @@ const Page = () => {
                       <div className="flex flex-col gap-3">
                         <div className="flex items-center gap-4 text-gray-400 font-sora text-xs">
                           <span className="flex items-center gap-1">
-                            <Calendar className="w-3.5 h-3.5 text-[#f78f36]" /> {post.date}
+                            <Calendar className="w-3.5 h-3.5 text-[#f78f36]" />{" "}
+                            {post.date}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3.5 h-3.5 text-[#f78f36]" /> {post.readTime}
+                            <Clock className="w-3.5 h-3.5 text-[#f78f36]" />{" "}
+                            {post.readTime}
                           </span>
                         </div>
-                        
+
                         <h3 className="text-lg font-bold font-sora text-black group-hover:text-[#f78f36] transition-colors duration-300 leading-snug">
                           {post.title}
                         </h3>
-                        
+
                         <p className="text-gray-600 font-dm-sans text-sm leading-relaxed line-clamp-3">
                           {post.excerpt}
                         </p>
@@ -232,7 +235,8 @@ const Page = () => {
                           onClick={() => setSelectedPost(post)}
                           className="text-sm font-bold font-sora text-[#f78f36] hover:text-black transition-colors flex items-center gap-1.5 cursor-pointer bg-transparent"
                         >
-                          Read Article <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                          Read Article{" "}
+                          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </button>
                       </div>
                     </div>
@@ -242,7 +246,9 @@ const Page = () => {
             </motion.div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-gray-500 font-dm-sans text-lg">No articles found matching your query.</p>
+              <p className="text-gray-500 font-dm-sans text-lg">
+                No articles found matching your query.
+              </p>
             </div>
           )}
         </div>
@@ -287,13 +293,17 @@ const Page = () => {
                   </h2>
                   <div className="flex items-center gap-4 text-xs font-dm-sans text-gray-500">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-[#f78f36]" /> {selectedPost.date}
+                      <Calendar className="w-3.5 h-3.5 text-[#f78f36]" />{" "}
+                      {selectedPost.date}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-[#f78f36]" /> {selectedPost.readTime}
+                      <Clock className="w-3.5 h-3.5 text-[#f78f36]" />{" "}
+                      {selectedPost.readTime}
                     </span>
                     <span className="text-gray-400">|</span>
-                    <span>Written by: <strong>{selectedPost.author}</strong></span>
+                    <span>
+                      Written by: <strong>{selectedPost.author}</strong>
+                    </span>
                   </div>
                 </div>
 
@@ -310,10 +320,15 @@ const Page = () => {
                 {/* Body Text */}
                 <div className="flex flex-col gap-4 font-dm-sans text-base text-gray-700 leading-relaxed border-t border-black/5 pt-6">
                   <p className="font-semibold text-black text-lg italic bg-gray-50 p-4 rounded-xl border-l-4 border-[#f78f36]">
-                    "{selectedPost.excerpt}"
+                    &quot;{selectedPost.excerpt}&quot;
                   </p>
                   <p>{selectedPost.content}</p>
-                  <p>Our specialists publish weekly articles analyzing building code changes, structural calculations, and supply chain constraints. Subscribe to our newsletter or connect with our engineering desk for tailored consultations on your designs.</p>
+                  <p>
+                    Our specialists publish weekly articles analyzing building
+                    code changes, structural calculations, and supply chain
+                    constraints. Subscribe to our newsletter or connect with our
+                    engineering desk for tailored consultations on your designs.
+                  </p>
                 </div>
 
                 <div className="pt-6 border-t border-black/5 flex justify-end">
@@ -329,7 +344,6 @@ const Page = () => {
           </div>
         )}
       </AnimatePresence>
-
     </div>
   );
 };

@@ -5,7 +5,6 @@ import Transition from "@/components/transition/Transition";
 import { TransitionProvider } from "@/context/TransitionContext";
 import { DM_Sans, Sora, Urbanist } from "next/font/google";
 import { usePathname } from "next/navigation";
-import "./globals.css";
 
 const sora = Sora({
   variable: "--font-sora",

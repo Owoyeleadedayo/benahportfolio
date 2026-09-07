@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, ArrowLeft, Check, ClipboardList, ShieldAlert, Award, FileText } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, FileText } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
 const Page = () => {
@@ -103,8 +103,10 @@ const Page = () => {
   };
 
   return (
-    <div ref={container} className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden">
-      
+    <div
+      ref={container}
+      className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden"
+    >
       {/* Page Header */}
       <section className="py-12 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
@@ -115,7 +117,9 @@ const Page = () => {
             Request an Estimate
           </h1>
           <p className="text-gray-600 font-dm-sans max-w-xl text-base md:text-lg">
-            Submit your project specifications through our structured application form, and our engineering desk will compile a draft bill-of-quantities.
+            Submit your project specifications through our structured
+            application form, and our engineering desk will compile a draft
+            bill-of-quantities.
           </p>
         </div>
       </section>
@@ -123,7 +127,6 @@ const Page = () => {
       {/* Form Section */}
       <section className="px-6 md:px-12 lg:px-24">
         <div className="max-w-3xl mx-auto bg-white border border-black/5 rounded-3xl p-8 md:p-10 shadow-lg relative">
-          
           {/* Progress Bar (Only show if not on success screen) */}
           {step < 4 && (
             <div className="flex flex-col gap-3 mb-10">
@@ -162,55 +165,95 @@ const Page = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="name" className="text-sm font-semibold font-sora text-gray-700">Full Name *</Label>
+                    <Label
+                      htmlFor="name"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Full Name *
+                    </Label>
                     <Input
                       id="name"
                       type="text"
                       placeholder="Jane Doe"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                     />
-                    {errors.name && <span className="text-xs text-rose-600 font-dm-sans">{errors.name}</span>}
+                    {errors.name && (
+                      <span className="text-xs text-rose-600 font-dm-sans">
+                        {errors.name}
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="email" className="text-sm font-semibold font-sora text-gray-700">Email Address *</Label>
+                    <Label
+                      htmlFor="email"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Email Address *
+                    </Label>
                     <Input
                       id="email"
                       type="email"
                       placeholder="jane@example.com"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                     />
-                    {errors.email && <span className="text-xs text-rose-600 font-dm-sans">{errors.email}</span>}
+                    {errors.email && (
+                      <span className="text-xs text-rose-600 font-dm-sans">
+                        {errors.email}
+                      </span>
+                    )}
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="phone" className="text-sm font-semibold font-sora text-gray-700">Phone Number *</Label>
+                    <Label
+                      htmlFor="phone"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Phone Number *
+                    </Label>
                     <Input
                       id="phone"
                       type="tel"
                       placeholder="+234 800 000 0000"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                     />
-                    {errors.phone && <span className="text-xs text-rose-600 font-dm-sans">{errors.phone}</span>}
+                    {errors.phone && (
+                      <span className="text-xs text-rose-600 font-dm-sans">
+                        {errors.phone}
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="company" className="text-sm font-semibold font-sora text-gray-700">Company Name (Optional)</Label>
+                    <Label
+                      htmlFor="company"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Company Name (Optional)
+                    </Label>
                     <Input
                       id="company"
                       type="text"
                       placeholder="e.g. Luxair Ltd"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, company: e.target.value })
+                      }
                     />
                   </div>
                 </div>
@@ -241,12 +284,19 @@ const Page = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="service" className="text-sm font-semibold font-sora text-gray-700">Type of Service Needed</Label>
+                    <Label
+                      htmlFor="service"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Type of Service Needed
+                    </Label>
                     <select
                       id="service"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4 text-sm font-dm-sans text-gray-700 h-[46px] focus:outline-none"
                       value={formData.service}
-                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, service: e.target.value })
+                      }
                     >
                       <option>Residential Construction</option>
                       <option>Commercial Construction</option>
@@ -258,12 +308,19 @@ const Page = () => {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="budget" className="text-sm font-semibold font-sora text-gray-700">Project Budget Range</Label>
+                    <Label
+                      htmlFor="budget"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Project Budget Range
+                    </Label>
                     <select
                       id="budget"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4 text-sm font-dm-sans text-gray-700 h-[46px] focus:outline-none"
                       value={formData.budget}
-                      onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, budget: e.target.value })
+                      }
                     >
                       <option>Under 10 Million NGN</option>
                       <option>10 Million - 50 Million NGN</option>
@@ -275,12 +332,19 @@ const Page = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="timeline" className="text-sm font-semibold font-sora text-gray-700">Desired Project Timeline</Label>
+                    <Label
+                      htmlFor="timeline"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Desired Project Timeline
+                    </Label>
                     <select
                       id="timeline"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4 text-sm font-dm-sans text-gray-700 h-[46px] focus:outline-none"
                       value={formData.timeline}
-                      onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, timeline: e.target.value })
+                      }
                     >
                       <option>Start Immediately</option>
                       <option>1 - 3 Months</option>
@@ -290,16 +354,27 @@ const Page = () => {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="location" className="text-sm font-semibold font-sora text-gray-700">Project Location State (Nigeria) *</Label>
+                    <Label
+                      htmlFor="location"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Project Location State (Nigeria) *
+                    </Label>
                     <Input
                       id="location"
                       type="text"
                       placeholder="e.g. Lagos, FCT Abuja"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.location}
-                      onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, location: e.target.value })
+                      }
                     />
-                    {errors.location && <span className="text-xs text-rose-600 font-dm-sans">{errors.location}</span>}
+                    {errors.location && (
+                      <span className="text-xs text-rose-600 font-dm-sans">
+                        {errors.location}
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -334,26 +409,44 @@ const Page = () => {
                 </h3>
 
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="desc" className="text-sm font-semibold font-sora text-gray-700">Project Description & Materials Scope *</Label>
+                  <Label
+                    htmlFor="desc"
+                    className="text-sm font-semibold font-sora text-gray-700"
+                  >
+                    Project Description & Materials Scope *
+                  </Label>
                   <Textarea
                     id="desc"
                     placeholder="Describe building parameters, layout designs, specific structural reinforcement items, site conditions..."
                     className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 min-h-[140px] py-3.5 px-4 font-dm-sans text-sm"
                     value={formData.description}
-                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, description: e.target.value })
+                    }
                   />
-                  {errors.description && <span className="text-xs text-rose-600 font-dm-sans">{errors.description}</span>}
+                  {errors.description && (
+                    <span className="text-xs text-rose-600 font-dm-sans">
+                      {errors.description}
+                    </span>
+                  )}
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="drawing" className="text-sm font-semibold font-sora text-gray-700">Design Link (e.g. PDF drawings / CAD files / Revit links)</Label>
+                  <Label
+                    htmlFor="drawing"
+                    className="text-sm font-semibold font-sora text-gray-700"
+                  >
+                    Design Link (e.g. PDF drawings / CAD files / Revit links)
+                  </Label>
                   <Input
                     id="drawing"
                     type="url"
                     placeholder="https://drive.google.com/..."
                     className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                     value={formData.drawingLink}
-                    onChange={(e) => setFormData({ ...formData, drawingLink: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, drawingLink: e.target.value })
+                    }
                   />
                 </div>
 
@@ -368,7 +461,8 @@ const Page = () => {
                     onClick={handleSubmit}
                     className="bg-[#f78f36] hover:bg-black hover:text-white border border-[#f78f36] text-white font-sora font-semibold py-3.5 px-10 rounded-xl cursor-pointer transition-all flex items-center gap-2 shadow-lg"
                   >
-                    Submit Quotation Request <ArrowRight className="w-4.5 h-4.5" />
+                    Submit Quotation Request{" "}
+                    <ArrowRight className="w-4.5 h-4.5" />
                   </Button>
                 </div>
               </motion.div>
@@ -391,7 +485,11 @@ const Page = () => {
                     Inquiry Successfully Logged!
                   </h3>
                   <p className="text-gray-500 font-dm-sans text-base max-w-md">
-                    Thank you, <strong>{formData.name}</strong>. Our senior cost estimators and structural planning engineers are reviewing your specifications. We will contact you at <strong>{formData.phone}</strong> or <strong>{formData.email}</strong> within 24 business hours.
+                    Thank you, <strong>{formData.name}</strong>. Our senior cost
+                    estimators and structural planning engineers are reviewing
+                    your specifications. We will contact you at{" "}
+                    <strong>{formData.phone}</strong> or{" "}
+                    <strong>{formData.email}</strong> within 24 business hours.
                   </p>
                 </div>
 
@@ -403,7 +501,7 @@ const Page = () => {
                     Submit Another Estimate
                   </Button>
                   <Button
-                    onClick={() => window.location.href = "/"}
+                    onClick={() => (window.location.href = "/")}
                     className="bg-transparent border border-black/10 text-black hover:bg-black hover:text-white font-sora font-semibold py-3 px-8 rounded-xl cursor-pointer"
                   >
                     Return Home
@@ -412,7 +510,6 @@ const Page = () => {
               </motion.div>
             )}
           </AnimatePresence>
-
         </div>
       </section>
 
@@ -422,10 +519,12 @@ const Page = () => {
           <FileText className="w-5 h-5" />
         </div>
         <p className="text-xs text-gray-500 font-dm-sans leading-relaxed">
-          * Information submitted through this portal is safeguarded by BENAH's strict corporate privacy protocols and NDAs. Data is only accessed by structural engineers and cost estimators in charge of constructing your project budget.
+          * Information submitted through this portal is safeguarded by
+          BENAH&lsquo;s strict corporate privacy protocols and NDAs. Data is
+          only accessed by structural engineers and cost estimators in charge of
+          constructing your project budget.
         </p>
       </section>
-
     </div>
   );
 };

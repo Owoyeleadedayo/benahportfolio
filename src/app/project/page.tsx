@@ -129,8 +129,10 @@ const Page = () => {
   });
 
   return (
-    <div ref={container} className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden">
-      
+    <div
+      ref={container}
+      className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden"
+    >
       {/* Page Header */}
       <section className="py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -142,7 +144,8 @@ const Page = () => {
               Our Completed Projects
             </h1>
             <p className="text-gray-600 font-dm-sans max-w-xl text-base">
-              Explore our record of engineering excellence across residential high-rises, commercial offices, civil works, and full renovations.
+              Explore our record of engineering excellence across residential
+              high-rises, commercial offices, civil works, and full renovations.
             </p>
           </div>
         </div>
@@ -217,9 +220,10 @@ const Page = () => {
                         {proj.desc}
                       </p>
                     </div>
-                    
+
                     <span className="text-sm font-bold font-sora text-[#f78f36] inline-flex items-center gap-1">
-                      View Details <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      View Details{" "}
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
                 </motion.div>
@@ -283,19 +287,28 @@ const Page = () => {
                       </h4>
                       <div className="flex items-center gap-3 font-dm-sans text-sm text-gray-700">
                         <Calendar className="w-4.5 h-4.5 text-[#f78f36]" />
-                        <span><strong>Date:</strong> {selectedProj.date}</span>
+                        <span>
+                          <strong>Date:</strong> {selectedProj.date}
+                        </span>
                       </div>
                       <div className="flex items-center gap-3 font-dm-sans text-sm text-gray-700">
                         <User className="w-4.5 h-4.5 text-[#f78f36]" />
-                        <span><strong>Client:</strong> {selectedProj.client}</span>
+                        <span>
+                          <strong>Client:</strong> {selectedProj.client}
+                        </span>
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-3">
-                      <h4 className="font-bold font-sora text-lg">Project Highlights</h4>
+                      <h4 className="font-bold font-sora text-lg">
+                        Project Highlights
+                      </h4>
                       <ul className="flex flex-col gap-2">
                         {selectedProj.specs.map((spec, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700 font-dm-sans">
+                          <li
+                            key={i}
+                            className="flex items-start gap-2.5 text-sm text-gray-700 font-dm-sans"
+                          >
                             <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                             <span>{spec}</span>
                           </li>
@@ -304,7 +317,9 @@ const Page = () => {
                     </div>
 
                     <div className="flex flex-col gap-3">
-                      <h4 className="font-bold font-sora text-lg">Project Overview</h4>
+                      <h4 className="font-bold font-sora text-lg">
+                        Project Overview
+                      </h4>
                       <p className="text-sm md:text-base text-gray-600 font-dm-sans leading-relaxed">
                         {selectedProj.desc}
                       </p>
@@ -316,12 +331,16 @@ const Page = () => {
                     {/* Toggle Selector */}
                     <div className="flex flex-col gap-3">
                       <div className="flex justify-between items-center">
-                        <h4 className="font-bold font-sora text-lg">Before & After</h4>
+                        <h4 className="font-bold font-sora text-lg">
+                          Before & After
+                        </h4>
                         <div className="flex bg-gray-100 rounded-lg p-1 text-xs">
                           <button
                             onClick={() => setBeforeAfterView("before")}
                             className={`px-3 py-1.5 rounded-md font-semibold font-sora cursor-pointer transition-all ${
-                              beforeAfterView === "before" ? "bg-white text-black shadow" : "text-gray-500"
+                              beforeAfterView === "before"
+                                ? "bg-white text-black shadow"
+                                : "text-gray-500"
                             }`}
                           >
                             Before
@@ -329,7 +348,9 @@ const Page = () => {
                           <button
                             onClick={() => setBeforeAfterView("after")}
                             className={`px-3 py-1.5 rounded-md font-semibold font-sora cursor-pointer transition-all ${
-                              beforeAfterView === "after" ? "bg-white text-[#f78f36] shadow" : "text-gray-500"
+                              beforeAfterView === "after"
+                                ? "bg-white text-[#f78f36] shadow"
+                                : "text-gray-500"
                             }`}
                           >
                             After
@@ -360,7 +381,9 @@ const Page = () => {
                             />
                             {/* Overlay Badge */}
                             <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur text-white text-xs font-bold font-sora px-3 py-1.5 rounded uppercase">
-                              {beforeAfterView === "before" ? "Before Structure" : "After Handover"}
+                              {beforeAfterView === "before"
+                                ? "Before Structure"
+                                : "After Handover"}
                             </div>
                           </motion.div>
                         </AnimatePresence>
@@ -369,7 +392,9 @@ const Page = () => {
 
                     {/* Mini Gallery */}
                     <div className="flex flex-col gap-3">
-                      <h4 className="font-bold font-sora text-lg">Project Gallery</h4>
+                      <h4 className="font-bold font-sora text-lg">
+                        Project Gallery
+                      </h4>
                       <div className="grid grid-cols-3 gap-3">
                         {selectedProj.gallery.map((img, idx) => (
                           <div
@@ -397,7 +422,7 @@ const Page = () => {
       {/* Mid Page Statement banner */}
       <section className="mx-6 md:mx-12 lg:mx-24 bg-black rounded-3xl overflow-hidden py-16 px-8 flex flex-col justify-center items-center text-center gap-6">
         <p className="text-white text-2xl md:text-3xl font-sora font-medium max-w-2xl leading-relaxed">
-          Have an ambitious project in mind? We'd love to build with you.
+          Have an ambitious project in mind? We&lsquo;d love to build with you.
         </p>
         <Link href="/contact">
           <Button className="bg-[#f78f36] hover:bg-white hover:text-black text-white text-lg font-bold font-sora px-8 py-5 rounded-xl border border-[#f78f36] cursor-pointer transition-colors duration-300 flex items-center gap-2">
@@ -405,7 +430,6 @@ const Page = () => {
           </Button>
         </Link>
       </section>
-
     </div>
   );
 };

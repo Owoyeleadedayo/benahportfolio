@@ -99,8 +99,10 @@ const Page = () => {
   });
 
   return (
-    <div ref={container} className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden">
-      
+    <div
+      ref={container}
+      className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden"
+    >
       {/* FAQ Header */}
       <section className="py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
@@ -111,7 +113,8 @@ const Page = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-gray-600 font-dm-sans max-w-xl text-base md:text-lg">
-            Find immediate answers regarding building regulations, permit administration, pricing structures, and engineering parameters.
+            Find immediate answers regarding building regulations, permit
+            administration, pricing structures, and engineering parameters.
           </p>
         </div>
       </section>
@@ -119,7 +122,6 @@ const Page = () => {
       {/* Filter and Search Bar */}
       <section className="px-6 md:px-12 lg:px-24 mb-12">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-6 justify-between items-center border-b border-black/5 pb-8">
-          
           {/* Categories */}
           <div className="flex flex-wrap gap-2.5 w-full md:w-auto">
             {categories.map((cat) => (
@@ -148,7 +150,6 @@ const Page = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-
         </div>
       </section>
 
@@ -172,7 +173,11 @@ const Page = () => {
                         {faq.q}
                       </span>
                       <span className="w-8 h-8 rounded-full bg-gray-50 group-hover:bg-[#f78f36]/10 flex items-center justify-center text-gray-500 shadow flex-shrink-0">
-                        {isOpen ? <Minus className="w-4 h-4 text-[#f78f36]" /> : <Plus className="w-4 h-4 text-black" />}
+                        {isOpen ? (
+                          <Minus className="w-4 h-4 text-[#f78f36]" />
+                        ) : (
+                          <Plus className="w-4 h-4 text-black" />
+                        )}
                       </span>
                     </button>
 
@@ -197,7 +202,9 @@ const Page = () => {
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-gray-500 font-dm-sans text-lg">No questions match your query.</p>
+              <p className="text-gray-500 font-dm-sans text-lg">
+                No questions match your query.
+              </p>
             </div>
           )}
         </div>
@@ -206,13 +213,14 @@ const Page = () => {
       {/* Support desk trigger */}
       <section className="mx-6 md:mx-12 lg:mx-24 bg-[#1C1917] rounded-3xl overflow-hidden py-16 px-8 flex flex-col justify-center items-center text-center gap-6 shadow-2xl relative">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        
+
         <HelpCircle className="w-12 h-12 text-[#f78f36]" />
         <h2 className="text-3xl font-sora font-semibold text-white max-w-2xl">
           Still Have Questions?
         </h2>
         <p className="text-gray-400 font-dm-sans text-base max-w-lg -mt-3">
-          If you didn't find the answers you need, direct your inquiries to our operations desk.
+          If you didn&lsquo;t find the answers you need, direct your inquiries
+          to our operations desk.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link href="/contact">
@@ -227,7 +235,6 @@ const Page = () => {
           </a>
         </div>
       </section>
-
     </div>
   );
 };

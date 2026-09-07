@@ -93,7 +93,7 @@ const Testimonials = () => {
 
               {/* Review Text */}
               <p className="text-lg md:text-xl font-dm-sans text-gray-200 leading-relaxed font-light italic max-w-2xl">
-                "{reviews[active].text}"
+                {reviews[active].text}
               </p>
 
               {/* Client Info */}

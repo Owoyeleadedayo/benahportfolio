@@ -81,8 +81,10 @@ const Page = () => {
   ];
 
   return (
-    <div ref={container} className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden">
-
+    <div
+      ref={container}
+      className="w-full bg-[#F6F4ED] text-black pt-24 pb-16 overflow-hidden"
+    >
       {/* Contact Header */}
       <section className="py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
@@ -93,7 +95,8 @@ const Page = () => {
             Connect With Our Team
           </h1>
           <p className="text-gray-600 font-dm-sans max-w-xl text-base md:text-lg">
-            Have questions about a project, tenders, or pricing estimates? Let's discuss how we can build it together.
+            Have questions about a project, tenders, or pricing estimates?
+            Let&lsquo;s discuss how we can build it together.
           </p>
         </div>
       </section>
@@ -101,7 +104,6 @@ const Page = () => {
       {/* Main Grid: Details & Form */}
       <section className="px-6 md:px-12 lg:px-24 mb-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
           {/* Contact Details (5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-8">
             <div className="bg-white border border-black/5 rounded-3xl p-8 shadow-lg flex flex-col gap-6">
@@ -114,7 +116,9 @@ const Page = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">Head Office</h4>
+                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">
+                    Head Office
+                  </h4>
                   <p className="text-gray-800 font-dm-sans text-base mt-1">
                     43, Oritshe Street, Awolowo Way, Ikeja, Lagos, Nigeria.
                   </p>
@@ -126,7 +130,9 @@ const Page = () => {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">Telephone</h4>
+                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">
+                    Telephone
+                  </h4>
                   <p className="text-gray-800 font-dm-sans text-base mt-1 hover:text-[#f78f36] transition-colors">
                     <a href="tel:+2348111511103">+234 (0) 811 151 1103</a>
                   </p>
@@ -138,9 +144,13 @@ const Page = () => {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">Email Address</h4>
+                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">
+                    Email Address
+                  </h4>
                   <p className="text-gray-800 font-dm-sans text-base mt-1 hover:text-[#f78f36] transition-colors">
-                    <a href="mailto:benahworld@gmail.com">benahworld@gmail.com</a>
+                    <a href="mailto:benahworld@gmail.com">
+                      benahworld@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -150,7 +160,9 @@ const Page = () => {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">Working Hours</h4>
+                  <h4 className="font-bold font-sora text-sm text-gray-500 uppercase">
+                    Working Hours
+                  </h4>
                   <p className="text-gray-800 font-dm-sans text-base mt-1">
                     Monday – Friday: 8:00 AM – 5:00 PM <br />
                     Saturday: 9:00 AM – 1:00 PM
@@ -170,7 +182,12 @@ const Page = () => {
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="fullname" className="text-sm font-semibold font-sora text-gray-700">Full Name</Label>
+                    <Label
+                      htmlFor="fullname"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Full Name
+                    </Label>
                     <Input
                       id="fullname"
                       required
@@ -178,12 +195,19 @@ const Page = () => {
                       placeholder="John Doe"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                     />
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="email" className="text-sm font-semibold font-sora text-gray-700">Email Address</Label>
+                    <Label
+                      htmlFor="email"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Email Address
+                    </Label>
                     <Input
                       id="email"
                       required
@@ -191,14 +215,21 @@ const Page = () => {
                       placeholder="john@example.com"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="phone" className="text-sm font-semibold font-sora text-gray-700">Phone Number</Label>
+                    <Label
+                      htmlFor="phone"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Phone Number
+                    </Label>
                     <Input
                       id="phone"
                       required
@@ -206,17 +237,26 @@ const Page = () => {
                       placeholder="+234 800 000 0000"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                     />
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor="service" className="text-sm font-semibold font-sora text-gray-700">Service Needed</Label>
+                    <Label
+                      htmlFor="service"
+                      className="text-sm font-semibold font-sora text-gray-700"
+                    >
+                      Service Needed
+                    </Label>
                     <select
                       id="service"
                       className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4 text-sm font-dm-sans text-gray-700 h-[46px] focus:outline-none"
                       value={formData.service}
-                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, service: e.target.value })
+                      }
                     >
                       <option>Residential Construction</option>
                       <option>Commercial Construction</option>
@@ -229,12 +269,19 @@ const Page = () => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="budget" className="text-sm font-semibold font-sora text-gray-700">Estimated Project Budget</Label>
+                  <Label
+                    htmlFor="budget"
+                    className="text-sm font-semibold font-sora text-gray-700"
+                  >
+                    Estimated Project Budget
+                  </Label>
                   <select
                     id="budget"
                     className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 py-3.5 px-4 text-sm font-dm-sans text-gray-700 h-[46px] focus:outline-none"
                     value={formData.budget}
-                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, budget: e.target.value })
+                    }
                   >
                     <option>Under 10 Million NGN</option>
                     <option>10 Million - 50 Million NGN</option>
@@ -244,24 +291,33 @@ const Page = () => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="msg" className="text-sm font-semibold font-sora text-gray-700">Project Description & Details</Label>
+                  <Label
+                    htmlFor="msg"
+                    className="text-sm font-semibold font-sora text-gray-700"
+                  >
+                    Project Description & Details
+                  </Label>
                   <Textarea
                     id="msg"
                     required
                     placeholder="Describe your project, material expectations, location specificities..."
                     className="rounded-xl border border-black/10 focus:border-[#f78f36] bg-gray-50/50 min-h-[120px] py-3 px-4 font-dm-sans"
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#f78f36] hover:bg-black hover:text-white border border-[#f78f36] text-white font-sora font-semibold py-4 rounded-xl cursor-pointer transition-all duration-300 flex justify-center items-center gap-2">
+                <Button
+                  type="submit"
+                  className="w-full bg-[#f78f36] hover:bg-black hover:text-white border border-[#f78f36] text-white font-sora font-semibold py-4 rounded-xl cursor-pointer transition-all duration-300 flex justify-center items-center gap-2"
+                >
                   Send Inquiries <ArrowRight className="w-5 h-5" />
                 </Button>
               </form>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -283,7 +339,6 @@ const Page = () => {
       {/* Common FAQ Section */}
       <section className="py-20 px-6 md:px-12 lg:px-24 bg-white border-t border-black/5">
         <div className="max-w-4xl mx-auto flex flex-col gap-12">
-
           <div className="flex flex-col items-center text-center gap-4">
             <Badge className="bg-[#E6EAF1] text-[#497CAB] font-bold font-sora text-md py-1 px-3">
               FAQ Section
@@ -292,7 +347,8 @@ const Page = () => {
               Common Questions
             </h2>
             <p className="text-gray-600 font-dm-sans text-base max-w-lg">
-              Frequently asked inquiries regarding pricing estimation, safety compliance, and governmental approvals.
+              Frequently asked inquiries regarding pricing estimation, safety
+              compliance, and governmental approvals.
             </p>
           </div>
 
@@ -312,7 +368,11 @@ const Page = () => {
                       {faq.q}
                     </span>
                     <span className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-gray-500 shadow flex-shrink-0">
-                      {isOpen ? <Minus className="w-4 h-4 text-[#f78f36]" /> : <Plus className="w-4 h-4 text-black" />}
+                      {isOpen ? (
+                        <Minus className="w-4 h-4 text-[#f78f36]" />
+                      ) : (
+                        <Plus className="w-4 h-4 text-black" />
+                      )}
                     </span>
                   </button>
 
@@ -335,7 +395,6 @@ const Page = () => {
               );
             })}
           </div>
-
         </div>
       </section>
 
@@ -347,7 +406,8 @@ const Page = () => {
           Need a site assessment or design review?
         </p>
         <p className="text-gray-400 font-dm-sans text-base max-w-lg -mt-3">
-          Our senior structural engineers are available for phone or physical site consultations.
+          Our senior structural engineers are available for phone or physical
+          site consultations.
         </p>
         <Link href="/quote">
           <Button className="bg-[#f78f36] hover:bg-white hover:text-black text-white text-lg font-bold font-sora px-8 py-5 rounded-xl border border-[#f78f36] cursor-pointer transition-colors duration-300 flex items-center gap-2">
@@ -355,7 +415,6 @@ const Page = () => {
           </Button>
         </Link>
       </section>
-
     </div>
   );
 };
