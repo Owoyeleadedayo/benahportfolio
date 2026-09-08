@@ -89,10 +89,10 @@ export default function Home() {
       <ProcessSection />
 
       {/* Mid-page Statement banner */}
-      <section className="bg-black py-20 px-6 md:px-12 lg:px-24">
+      <section className="bg-black py-20 px-6 md:px-12 lg:px-35">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="flex flex-col gap-6 max-w-2xl">
-            <p className="text-2xl md:text-4xl text-white font-sora font-medium leading-relaxed">
+            <p className="text-2xl md:text-3xl text-white font-sora font-medium leading-none md:leading-relaxed">
               At Benah World Wide, we are driven to change lives for the better by creating places and spaces that positively impact the people who use them and the environment that surrounds them.
             </p>
             <div className="flex justify-start">
@@ -116,10 +116,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Carousel */}
       <Testimonials />
 
-      {/* Large Request Quote CTA Banner */}
       <HomeCTA />
     </div>
   );

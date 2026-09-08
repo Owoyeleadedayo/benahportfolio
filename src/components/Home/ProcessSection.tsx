@@ -51,15 +51,15 @@ const ProcessSection = () => {
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-37 bg-[#FFFFFF] text-black overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col gap-16">
+    <section className="py-20 px-6 md:px-12 lg:px-37 bg-[rgb(255,255,255)] text-black overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-16">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center gap-4">
+        <div className="flex flex-col items-center text-center gap-2 md:gap-4">
           <Badge className="bg-[#E6EAF1] text-[#497CAB] font-bold font-sora text-xs uppercase py-1 px-3">
             Our Method
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-semibold font-sora tracking-tight">
+          <h2 className="text-xl md:text-4xl font-semibold font-sora tracking-tight">
             How We Bring Plans to Life
           </h2>
           <p className="text-gray-600 font-dm-sans max-w-xl text-base md:text-base">
@@ -102,7 +102,7 @@ const ProcessSection = () => {
                   <h3 className="text-xl font-bold font-sora text-black group-hover:text-[#f78f36] transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 font-dm-sans text-sm md:text-base leading-relaxed px-2">
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed px-2">
                     {item.desc}
                   </p>
                 </div>

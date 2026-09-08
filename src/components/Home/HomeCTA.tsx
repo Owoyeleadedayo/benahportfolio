@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const HomeCTA = () => {
   return (
-    <section className="relative py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section className="relative py-24 px-6 md:px-12 lg:px-35 overflow-hidden">
       {/* Background Image with Dark Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed scale-105"
@@ -28,7 +28,7 @@ const HomeCTA = () => {
             <span className="text-[#f78f36] font-bold font-sora tracking-widest text-xs md:text-sm uppercase border-l-2 border-[#f78f36] pl-3">
               Start Your Journey
             </span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold font-sora text-white leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-5xl font-semibold font-sora text-white leading-tight tracking-tight">
               Ready to Build Your Next Masterpiece?
             </h2>
             <p className="text-gray-300 font-dm-sans text-base md:text-lg leading-relaxed max-w-2xl">

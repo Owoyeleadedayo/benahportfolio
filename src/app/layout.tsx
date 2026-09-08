@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Transition from "@/components/transition/Transition";
 import { TransitionProvider } from "@/context/TransitionContext";
-import { DM_Sans, Sora, Urbanist } from "next/font/google";
+import { DM_Sans, Sora } from "next/font/google";
 import { usePathname } from "next/navigation";
+import "./globals.css";
+
 
 const sora = Sora({
   variable: "--font-sora",
@@ -18,11 +20,6 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
 });
 
-const urbanist = Urbanist({
-  variable: "--font-urbanist",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 export default function RootLayout({
   children,
@@ -33,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.className} ${dmSans.variable} ${urbanist.variable} antialiased`}
+        className={`${sora.className} ${dmSans.variable} antialiased`}
       >
         <TransitionProvider>
           <Header />
